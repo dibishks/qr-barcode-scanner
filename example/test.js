@@ -1,8 +1,11 @@
 var path, qrdecoder;
+const options = {
+  try_harder: true,
+  multi: true
+};
+qrdecoder = require('..')(options);
 
-qrdecoder = require('..')();
-
-path = "./a.jpg";
+path = "./2barcodejpg.jpg";
 
 qrdecoder.decode(path, (function(_this) {
   return function(err, out) {
